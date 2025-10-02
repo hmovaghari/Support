@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "_Matrix";
+}
+
+<link rel="stylesheet" href="https://hmovaghari.ir/contents/contact.css">
+
+<!-- Contact Form Section -->
+<section class="contact-form-section">
+    <div class="form-container">
+        <h1 class="form-title">
+            <i class="fas fa-terminal"></i>
+            - تماس با من - Contact me
+        </h1>
+
+        <form id="contact-form" method="POST" action="Email/Send" target="_blank">
+            <!-- نام و ایمیل در یک ردیف -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label" for="name">
+                        <i class="fas fa-user"></i>
+                        نام - Name <span class="required">*</span>
+                    </label>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           class="form-input"
+                           placeholder="نام شما - Your name"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">
+                        <i class="fas fa-envelope"></i>
+                        ایمیل - Email <span class="required">*</span>
+                    </label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           class="form-input"
+                           placeholder="email@example.com"
+                           required>
+                </div>
+            </div>
+
+            <!-- موضوع -->
+            <div class="form-group">
+                <label class="form-label" for="subject">
+                    <i class="fas fa-tag"></i>
+                    موضوع - Subject <span class="required">*</span>
+                </label>
+                <input type="text"
+                       id="subject"
+                       name="subject"
+                       class="form-input"
+                       placeholder="موضوع پیام - Message subject"
+                       required>
+            </div>
+
+            <!-- پیام -->
+            <div class="form-group">
+                <label class="form-label" for="message">
+                    <i class="fas fa-comment"></i>
+                    پیام - Message <span class="required">*</span>
+                </label>
+                <textarea id="message"
+                          name="message"
+                          class="form-textarea"
+                          placeholder="متن پیام شما Your message text ..."
+                          required></textarea>
+            </div>
+
+            <!-- دکمه ارسال -->
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                ارسال - Send
+            </button>
+
+            <!-- پیام نتیجه -->
+            <div id="form-message" class="form-message"></div>
+        </form>
+    </div>
+</section>

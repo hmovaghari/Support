@@ -9,6 +9,11 @@ namespace Support
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddSingleton(new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build());
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
